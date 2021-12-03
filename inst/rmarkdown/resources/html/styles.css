@@ -16,7 +16,7 @@
 
 /* Fix font in tables */
 table.lightable-paper tbody {
-  font-family: 'JetBrains Mono', monospace; !important;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 /* Fix bottom margin in output blocks */
