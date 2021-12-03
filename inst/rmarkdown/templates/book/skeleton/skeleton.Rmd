@@ -1,0 +1,25 @@
+--- 
+# See https://github.com/fnaufel/fnaufelRmd for more information.
+
+knit: "bookdown::render_book"
+
+title: "???????"
+description: "???????"
+author: "Fernando Náufel"
+date: "   (versão de `r format(Sys.Date(), '%d/%m/%Y')`)"
+lang: 'pt-br'
+
+cover-image: images/?????
+
+documentclass: "report"
+classoption: '11pt'
+geometry: 'margin=1in'
+bibliography: []
+biblio-style: apalike
+link-citations: yes
+
+---
+
+# Intro {- #intro}
+
+

@@ -1,0 +1,4 @@
+name: report
+description: >
+   Bookdown template that uses fnaufelRmd::html_report and fnaufelRmd::pdf_report
+create_dir: FALSE

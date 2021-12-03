@@ -1,0 +1,4 @@
+name: book
+description: >
+  Bookdown template that uses fnaufelRmd::bs4_book and fnaufelRmd::pdf_book
+create_dir: false

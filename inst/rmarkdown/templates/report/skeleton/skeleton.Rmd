@@ -1,0 +1,46 @@
+---
+title: ''
+subtitle: ''
+author: 'fnaufel'
+email: 'https://fnaufel.github.io/'
+date: '   (v. `r format(Sys.Date(), "%d/%m/%Y")`)'
+lang: 'pt-br'
+output: 
+  fnaufelRmd::html_report:
+    []
+  fnaufelRmd::pdf_report:
+    []
+# To install these formats, enter
+#   install.packages("devtools")
+#   devtools::install_github("fnaufel/fnaufelRmd")
+---
+
+```{r setup, include=FALSE}
+# The next command configures MANY things and loads quite a few packages.
+# 
+# If you want to see what's being done, execute 
+# 
+#   cat(
+#     system.file(
+#       "rmarkdown/resources/R/_common.R", 
+#       package = "fnaufelRmd"
+#     )
+#   )
+# 
+# to find out the location of the file. Then open the file.
+# 
+# If you want to change the configuration, copy the file, edit it, and
+# source it instead of the package file. 
+# 
+# Or simply write your commands here in this code chunk.
+
+source(
+  system.file(
+    "rmarkdown/resources/_common_report.R",
+    package = "fnaufelRmd"
+  )
+)
+```
+
+
+# Intro
