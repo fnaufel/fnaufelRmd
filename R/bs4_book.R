@@ -46,15 +46,9 @@ bs4_book <- function(
     package = "fnaufelRmd"
   ),
   includes = rmarkdown::includes(
-    in_header = system.file(
-      "rmarkdown/resources/html/preamble.html",
-      package = "fnaufelRmd"
-    )
+    in_header = 'html/preamble.html'
   ),
-  css = system.file(
-    "rmarkdown/resources/html/styles.css",
-    package = "fnaufelRmd"
-  ),
+  css = 'html/styles.css',
   repo = NULL,
   site = bookdown::bookdown_site,
   lib_dir = "libs",
