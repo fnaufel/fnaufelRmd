@@ -20,15 +20,13 @@ html_report(
   code_folding = "show",
   code_download = TRUE,
   self_contained = TRUE,
-  theme = bslib::bs_theme(primary = "#086a6a", base_font =
-    bslib::font_google("Lexend"), heading_font = bslib::font_google("Roboto"), code_font
-    = bslib::font_google("JetBrains Mono"), ),
+  theme = "default",
   highlight = "default",
   mathjax = "default",
   template = "default",
   extra_dependencies = NULL,
-  css = "html/styles.css",
-  includes = rmarkdown::includes(in_header = "html/preamble.html"),
+  css = "html_files/styles.css",
+  includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
   keep_md = FALSE,
   lib_dir = "libs",
   md_extensions = NULL,

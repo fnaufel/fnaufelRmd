@@ -38,6 +38,7 @@
 #' @export
 #' @importFrom bslib bs_theme font_google
 #' @importFrom rmarkdown includes html_document
+#' @importFrom purrr walk
 #'
 html_report <- function(
   toc = TRUE,
@@ -60,9 +61,9 @@ html_report <- function(
   mathjax = "default",
   template = "default",
   extra_dependencies = NULL,
-  css = 'html/styles.css',
+  css = 'html_files/styles.css',
   includes = rmarkdown::includes(
-    in_header = 'html/preamble.html'
+    in_header = 'html_files/preamble.html'
   ),
   keep_md = FALSE,
   lib_dir = "libs",
@@ -70,6 +71,21 @@ html_report <- function(
   pandoc_args = NULL,
   ...
 ) {
+
+  # Destination dir for supporting files
+  to <- normalizePath(dirname(css))
+
+  # Check if supporting files are outdated. If so, copy from package dir
+  supporting <- system.file(
+    c(
+      'rmarkdown/resources/html_files/styles.css',
+      'rmarkdown/resources/html_files/alterar_detalhes.js',
+      'rmarkdown/resources/html_files/preamble.html',
+      'rmarkdown/resources/images'
+    ),
+    package = 'fnaufelRmd'
+  )
+  purrr::walk(supporting, ~copy_if_stale(., to))
 
   # call the base function
   rmarkdown::html_document(
