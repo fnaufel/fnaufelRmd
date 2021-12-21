@@ -4,32 +4,33 @@
 #'
 #' @title html_report
 #'
+#' @param copy_supporting_files If TRUE, copy supporting files (css, js, html) to document dir before rendering
 #' @param toc see [rmarkdown::html_document]
 #' @param toc_depth see [rmarkdown::html_document]
 #' @param toc_float see [rmarkdown::html_document]
-#' @param number see [rmarkdown::html_document]
-#' @param anchor see [rmarkdown::html_document]
-#' @param section see [rmarkdown::html_document]
-#' @param fig see [rmarkdown::html_document]
-#' @param fig see [rmarkdown::html_document]
-#' @param fig see [rmarkdown::html_document]
-#' @param fig see [rmarkdown::html_document]
+#' @param number_sections see [rmarkdown::html_document]
+#' @param anchor_sections see [rmarkdown::html_document]
+#' @param section_divs see [rmarkdown::html_document]
+#' @param fig_width see [rmarkdown::html_document]
+#' @param fig_height see [rmarkdown::html_document]
+#' @param fig_retina see [rmarkdown::html_document]
+#' @param fig_caption see [rmarkdown::html_document]
 #' @param dev see [rmarkdown::html_document]
-#' @param df see [rmarkdown::html_document]
-#' @param code see [rmarkdown::html_document]
-#' @param code see [rmarkdown::html_document]
-#' @param self see [rmarkdown::html_document]
+#' @param df_print see [rmarkdown::html_document]
+#' @param code_folding see [rmarkdown::html_document]
+#' @param code_download see [rmarkdown::html_document]
+#' @param self_contained see [rmarkdown::html_document]
 #' @param theme see [rmarkdown::html_document]
 #' @param highlight see [rmarkdown::html_document]
 #' @param mathjax see [rmarkdown::html_document]
 #' @param template see [rmarkdown::html_document]
-#' @param extra see [rmarkdown::html_document]
+#' @param extra_dependencies see [rmarkdown::html_document]
 #' @param css see [rmarkdown::html_document]
 #' @param includes see [rmarkdown::html_document]
-#' @param keep see [rmarkdown::html_document]
-#' @param lib see [rmarkdown::html_document]
-#' @param md see [rmarkdown::html_document]
-#' @param pandoc see [rmarkdown::html_document]
+#' @param keep_md see [rmarkdown::html_document]
+#' @param lib_dir see [rmarkdown::html_document]
+#' @param md_extensions see [rmarkdown::html_document]
+#' @param pandoc_args see [rmarkdown::html_document]
 #' @param ... see [rmarkdown::html_document]
 #'
 #' @return see [rmarkdown::html_document]
@@ -40,6 +41,7 @@
 #' @importFrom rmarkdown includes html_document
 #'
 html_report <- function(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   toc_depth = 3,
   toc_float = FALSE,
@@ -71,20 +73,28 @@ html_report <- function(
   ...
 ) {
 
-  # Destination dir for supporting files
-  to <- normalizePath(dirname(css))
+  if (copy_supporting_files) {
+    # Destination dir for supporting files
+    target_dir <- normalizePath('html_files')
 
-  # Check if supporting files are outdated. If so, copy from package dir
-  supporting <- system.file(
-    c(
-      'rmarkdown/resources/html_files/styles.css',
-      'rmarkdown/resources/html_files/alterar_detalhes.js',
-      'rmarkdown/resources/html_files/preamble.html',
-      'rmarkdown/resources/images'
-    ),
-    package = 'fnaufelRmd'
-  )
-  purrr::walk(supporting, ????(., to))
+    supporting <- system.file(
+      c(
+        'rmarkdown/resources/html_files/styles.css',
+        'rmarkdown/resources/html_files/alterar_detalhes.js',
+        'rmarkdown/resources/html_files/preamble.html',
+        'rmarkdown/resources/images'
+      ),
+      package = 'fnaufelRmd'
+    )
+
+    file.copy(
+      from = supporting,
+      to = target_dir,
+      overwrite = TRUE,
+      recursive = TRUE,
+      copy.date = TRUE
+    )
+  }
 
   # call the base function
   rmarkdown::html_document(

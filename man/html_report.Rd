@@ -5,6 +5,7 @@
 \title{html_report}
 \usage{
 html_report(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   toc_depth = 3,
   toc_float = FALSE,
@@ -35,9 +36,37 @@ html_report(
 )
 }
 \arguments{
+\item{copy_supporting_files}{If TRUE, copy supporting files (css, js, html) to document dir before rendering}
+
 \item{toc}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
+\item{toc_depth}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{toc_float}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{number_sections}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{anchor_sections}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{section_divs}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{fig_width}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{fig_height}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{fig_retina}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{fig_caption}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
 \item{dev}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{df_print}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{code_folding}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{code_download}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{self_contained}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
 \item{theme}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
@@ -47,41 +76,27 @@ html_report(
 
 \item{template}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
+\item{extra_dependencies}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
 \item{css}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
 \item{includes}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 
+\item{keep_md}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{lib_dir}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{md_extensions}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
+\item{pandoc_args}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+
 \item{...}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{number}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{anchor}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{section}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{fig}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{df}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{code}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{self}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{extra}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{keep}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{lib}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{md}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
-
-\item{pandoc}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
 }
 \value{
 see \link[rmarkdown:html_document]{rmarkdown::html_document}
 }
 \description{
-Custom HTML template
+Custom HTML template for reports
 }
 \details{
 Loads additional style and configs

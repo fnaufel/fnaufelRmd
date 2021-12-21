@@ -36,7 +36,7 @@ output:
 
 source(
   system.file(
-    "rmarkdown/resources/_common_report.R",
+    "rmarkdown/resources/R/_common_report.R",
     package = "fnaufelRmd"
   )
 )
