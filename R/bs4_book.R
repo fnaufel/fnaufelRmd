@@ -42,13 +42,13 @@ bs4_book <- function(
     code_font = bslib::font_google("JetBrains Mono"),
   ),
   template = system.file(
-    "rmarkdown/resources/html/bs4_book_ptbr.html",
+    "rmarkdown/resources/html_files/bs4_book_ptbr.html",
     package = "fnaufelRmd"
   ),
   includes = rmarkdown::includes(
-    in_header = 'html/preamble.html'
+    in_header = 'html_files/preamble.html'
   ),
-  css = 'html/styles.css',
+  css = 'html_files/styles.css',
   repo = NULL,
   site = bookdown::bookdown_site,
   lib_dir = "libs",
@@ -90,6 +90,11 @@ bs4_book <- function(
     includes = includes,
     keep_md = keep_md,
     md_extensions = md_extensions,
+    before_chapter_script =
+      system.file(
+        "rmarkdown/resources/R/_common_book.R",
+        package = "fnaufelRmd"
+      ),
     ...
   )
 

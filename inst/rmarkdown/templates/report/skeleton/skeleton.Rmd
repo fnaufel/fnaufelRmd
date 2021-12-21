@@ -22,7 +22,7 @@ output:
 # 
 #   cat(
 #     system.file(
-#       "rmarkdown/resources/R/_common.R", 
+#       "rmarkdown/resources/R/_common_report.R", 
 #       package = "fnaufelRmd"
 #     )
 #   )

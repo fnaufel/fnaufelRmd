@@ -1,6 +1,5 @@
 new_session: no
 delete_merged_file: true
-before_chapter_script: "_common.R"
 output_dir: "docs"
 
 # If not using Portuguese, delete these lines
