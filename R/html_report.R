@@ -1,12 +1,12 @@
-#' Custom HTML template
+#' Custom HTML template for reports
 #'
 #' Loads additional style and configs
 #'
 #' @title html_report
 #'
 #' @param toc see [rmarkdown::html_document]
-#' @param toc see [rmarkdown::html_document]
-#' @param toc see [rmarkdown::html_document]
+#' @param toc_depth see [rmarkdown::html_document]
+#' @param toc_float see [rmarkdown::html_document]
 #' @param number see [rmarkdown::html_document]
 #' @param anchor see [rmarkdown::html_document]
 #' @param section see [rmarkdown::html_document]
@@ -38,7 +38,6 @@
 #' @export
 #' @importFrom bslib bs_theme font_google
 #' @importFrom rmarkdown includes html_document
-#' @importFrom purrr walk
 #'
 html_report <- function(
   toc = TRUE,
@@ -85,7 +84,7 @@ html_report <- function(
     ),
     package = 'fnaufelRmd'
   )
-  purrr::walk(supporting, ~copy_if_stale(., to))
+  purrr::walk(supporting, ????(., to))
 
   # call the base function
   rmarkdown::html_document(
