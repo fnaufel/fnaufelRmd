@@ -90,11 +90,6 @@ bs4_book <- function(
     includes = includes,
     keep_md = keep_md,
     md_extensions = md_extensions,
-    before_chapter_script =
-      system.file(
-        "rmarkdown/resources/R/_common_book.R",
-        package = "fnaufelRmd"
-      ),
     ...
   )
 

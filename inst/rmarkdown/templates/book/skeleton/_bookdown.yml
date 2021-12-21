@@ -1,6 +1,8 @@
 new_session: no
 delete_merged_file: true
-output_dir: "docs"
+output_dir: 'docs'
+before_chapter_script: 'before_chapter.R'
+
 
 # If not using Portuguese, delete these lines
 language:
@@ -25,5 +27,5 @@ language:
     appendix_name: 'Apêndice '
 
 rmd_files: [
-  "index.Rmd"
+  'index.Rmd'
 ]
