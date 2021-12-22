@@ -1,5 +1,10 @@
-/* Source code */
 
+/* Links in main text (not navigation) */
+main a {
+  text-decoration: underline;
+}
+
+/* Source code */
 /*
 
 + bs4book has code with negative side margins! Make them smaller

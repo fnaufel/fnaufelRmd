@@ -35,11 +35,6 @@ div.sourceCode + pre {
   margin-bottom: 2em;
 }
 
-/* Links in main text (not navigation) */
-main a {
-  text-decoration: underline;
-}
-
 /* I don't like the frame around images */
 .inline-figure {
   border: none;
@@ -58,7 +53,7 @@ main a {
 
 .rmdbox {
   margin: 1rem calc(-2px - 0.5em);
-  padding: 1em 1em 3ex 1em;
+  padding: 1.3em 1em 1em 1em;
   border: 2px solid #ccc;
   background: #fcfcfc;
   border-radius: 10px;
@@ -66,6 +61,7 @@ main a {
 
 .rmdbox > *:last-child, .rmdnote > *:last-child, .rmdcaution > *:last-child, .rmdimportant > *:last-child, .rmdtip > *:last-child, .rmdwarning > *:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -78,7 +74,7 @@ main a {
 .rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
   margin: 1rem calc(-2px - 0.5em);
   border: 2px solid #ccc;
-  padding: 1em 1em 3ex 6em;
+  padding: 1.3em 1em 1em 6em;
   background: #fcfcfc 25px calc(10% + 10px) no-repeat;
   border-radius: 10px;
 }

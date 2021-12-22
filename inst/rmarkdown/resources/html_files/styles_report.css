@@ -14,3 +14,8 @@ h1, h2, h3, h4, h5, h6, nav, footer, .chapter-nav {
 }
 
 
+/* Links in main text (not navigation) */
+.section a {
+  text-decoration: underline;
+}
+
