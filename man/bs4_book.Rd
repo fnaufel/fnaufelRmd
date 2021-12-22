@@ -12,7 +12,7 @@ bs4_book(
   template = system.file("rmarkdown/resources/html_files/bs4_book_ptbr.html", package =
     "fnaufelRmd"),
   includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
-  css = "html_files/styles.css",
+  css = "default",
   repo = NULL,
   site = bookdown::bookdown_site,
   lib_dir = "libs",

@@ -62,7 +62,7 @@ html_report <- function(
   mathjax = "default",
   template = "default",
   extra_dependencies = NULL,
-  css = 'html_files/styles.css',
+  css = 'default',
   includes = rmarkdown::includes(
     in_header = 'html_files/preamble.html'
   ),
@@ -79,7 +79,8 @@ html_report <- function(
 
     supporting <- system.file(
       c(
-        'rmarkdown/resources/html_files/styles.css',
+        'rmarkdown/resources/html_files/styles_all.css',
+        'rmarkdown/resources/html_files/styles_report.css',
         'rmarkdown/resources/html_files/alterar_detalhes.js',
         'rmarkdown/resources/html_files/preamble.html',
         'rmarkdown/resources/images'
@@ -93,6 +94,15 @@ html_report <- function(
       overwrite = TRUE,
       recursive = TRUE,
       copy.date = TRUE
+    )
+  }
+
+  # css styles
+  if ('default' %in% css) {
+    css <- c(
+      'html_files/styles_all.css',
+      'html_files/styles_report.css',
+      css[css != 'default']
     )
   }
 

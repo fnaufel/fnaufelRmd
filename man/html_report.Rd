@@ -26,7 +26,7 @@ html_report(
   mathjax = "default",
   template = "default",
   extra_dependencies = NULL,
-  css = "html_files/styles.css",
+  css = "default",
   includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
   keep_md = FALSE,
   lib_dir = "libs",

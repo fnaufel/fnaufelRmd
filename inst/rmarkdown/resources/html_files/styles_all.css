@@ -195,55 +195,16 @@ h3 > .header-section-number {
 }
 
 
-/* Source code */
-
-/*
-
-+ bs4book has code with negative side margins! Make them smaller
-
-+ Also, add border and rounded corners
-
-*/
-pre.sourceCode {
-  margin: 0 -.5rem 1rem -.5rem;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
+/* highlight */
+.hl,
+.hl code{
+  background-color: yellow;
 }
 
-
-/* Misc */
-
-/*
-p.caption {
-  color: #777;
-  margin-top: 10px;
+.framed {
+  border: solid 2px #f1f1f1;
 }
 
-p code {
-  white-space: inherit;
-}
-
-pre {
-  word-break: normal;
-  word-wrap: normal;
-}
-
-pre code {
-  white-space: inherit;
-}
-
-blockquote > p:last-child {
-  text-align: right;
-}
-
-blockquote > p:first-child {
-  text-align: inherit;
-}
-
-.book .book-body .page-wrapper .page-inner section.normal strong {
-  font-weight: 600;
-}
-*/
 
 /* Utilities */
 
@@ -286,15 +247,5 @@ blockquote > p:first-child {
 
 .vspace{
   height: 2em;
-}
-
-/* highlight */
-.hl,
-.hl code{
-  background-color: yellow;
-}
-
-.framed {
-  border: solid 2px #f1f1f1;
 }
 

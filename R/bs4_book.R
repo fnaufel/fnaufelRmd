@@ -50,7 +50,7 @@ bs4_book <- function(
   includes = rmarkdown::includes(
     in_header = 'html_files/preamble.html'
   ),
-  css = 'html_files/styles.css',
+  css = 'default',
   repo = NULL,
   site = bookdown::bookdown_site,
   lib_dir = "libs",
@@ -76,7 +76,8 @@ bs4_book <- function(
 
     supporting <- system.file(
       c(
-        'rmarkdown/resources/html_files/styles.css',
+        'rmarkdown/resources/html_files/styles_all.css',
+        'rmarkdown/resources/html_files/styles_book.css',
         'rmarkdown/resources/html_files/alterar_detalhes.js',
         'rmarkdown/resources/html_files/preamble.html',
         'rmarkdown/resources/images'
@@ -90,6 +91,15 @@ bs4_book <- function(
       overwrite = TRUE,
       recursive = TRUE,
       copy.date = TRUE
+    )
+  }
+
+  # css styles
+  if ('default' %in% css) {
+    css <- c(
+      'html_files/styles_all.css',
+      'html_files/styles_book.css',
+      css[css != 'default']
     )
   }
 

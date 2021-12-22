@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lexend&family=JetBrains+Mono&display=swap');
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+
+h1, h2, h3, h4, h5, h6, nav, footer, .chapter-nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+
