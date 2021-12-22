@@ -2,6 +2,8 @@ fnaufelRmd::bs4_book:
   url: 'https\://fnaufel.github.io/??????'
   github-repo: fnaufel/??????
   repo: https://github.com/fnaufel/???????
+  # If not using Portuguese, uncomment this line:
+  # template: 'default'
 
 fnaufelRmd::pdf_book:
   []

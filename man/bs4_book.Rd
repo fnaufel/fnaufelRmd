@@ -5,13 +5,14 @@
 \title{bs4_book}
 \usage{
 bs4_book(
+  copy_supporting_files = TRUE,
   theme = bookdown::bs4_book_theme(primary = "#086a6a", base_font =
     bslib::font_google("Lexend"), heading_font = bslib::font_google("Roboto"), code_font
     = bslib::font_google("JetBrains Mono"), ),
-  template = system.file("rmarkdown/resources/html/bs4_book_ptbr.html", package =
+  template = system.file("rmarkdown/resources/html_files/bs4_book_ptbr.html", package =
     "fnaufelRmd"),
-  includes = rmarkdown::includes(in_header = "html/preamble.html"),
-  css = "html/styles.css",
+  includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
+  css = "html_files/styles.css",
   repo = NULL,
   site = bookdown::bookdown_site,
   lib_dir = "libs",
@@ -32,6 +33,8 @@ bs4_book(
 )
 }
 \arguments{
+\item{copy_supporting_files}{If TRUE, copy supporting files (css, js, html) to document dir before rendering}
+
 \item{theme}{see \link[bookdown:bs4_book]{bookdown::bs4_book}}
 
 \item{template}{see \link[bookdown:bs4_book]{bookdown::bs4_book}}

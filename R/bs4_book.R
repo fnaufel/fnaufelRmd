@@ -4,6 +4,7 @@
 #'
 #' @title bs4_book
 #'
+#' @param copy_supporting_files If TRUE, copy supporting files (css, js, html) to document dir before rendering
 #' @param theme see [bookdown::bs4_book]
 #' @param template see [bookdown::bs4_book]
 #' @param includes see [bookdown::bs4_book]
@@ -35,6 +36,7 @@
 #' @importFrom bslib font_google
 #' @importFrom rmarkdown includes
 bs4_book <- function(
+  copy_supporting_files = TRUE,
   theme = bookdown::bs4_book_theme(
     primary = "#086a6a",
     base_font = bslib::font_google("Lexend"),
@@ -67,6 +69,29 @@ bs4_book <- function(
   md_extensions = NULL,
   ...
 ) {
+
+  if (copy_supporting_files) {
+    # Destination dir for supporting files
+    target_dir <- normalizePath('html_files')
+
+    supporting <- system.file(
+      c(
+        'rmarkdown/resources/html_files/styles.css',
+        'rmarkdown/resources/html_files/alterar_detalhes.js',
+        'rmarkdown/resources/html_files/preamble.html',
+        'rmarkdown/resources/images'
+      ),
+      package = 'fnaufelRmd'
+    )
+
+    file.copy(
+      from = supporting,
+      to = target_dir,
+      overwrite = TRUE,
+      recursive = TRUE,
+      copy.date = TRUE
+    )
+  }
 
   # call the base function
   bookdown::bs4_book(
