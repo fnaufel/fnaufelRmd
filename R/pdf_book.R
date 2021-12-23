@@ -71,13 +71,13 @@ pdf_book <- function(
   citation_package = 'natbib',
   includes = rmarkdown::includes(
     in_header = system.file(
-      "rmarkdown/resources/tex/00-preambulo.tex",
+      "rmarkdown/resources/tex/bd-preamble.tex",
       package = "fnaufelRmd"
     )
   ),
   md_extensions = '+fenced_divs+bracketed_spans',
   template = system.file(
-    'rmarkdown/resources/tex/bd.format.latex',
+    'rmarkdown/resources/tex/bd-format.latex',
     package = 'fnaufelRmd'
   ),
   ...

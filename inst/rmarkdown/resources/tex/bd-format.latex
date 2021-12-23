@@ -377,7 +377,7 @@ $endfor$
 \def\languageshorthands#1{}
 $endif$
 
-% A command to save the path to the resources of bd.format
+% A command to save the path to the resources of bd.format (fnaufel)
 \newcommand{\dir}{$resources$}
 
 
