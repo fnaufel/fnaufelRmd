@@ -1,8 +1,14 @@
+# To install these output formats, run
+#   install.packages("devtools")
+#   devtools::install_github("fnaufel/fnaufelRmd")
+
 fnaufelRmd::bs4_book:
   url: 'https\://fnaufel.github.io/??????'
   github-repo: fnaufel/??????
   repo: https://github.com/fnaufel/???????
-  # If not using Portuguese, uncomment this line:
+  # If not using Portuguese, change lang: 'pt-br' in your .Rmd file
+  # and uncomment this next line:
+  #
   # template: 'default'
 
 fnaufelRmd::pdf_book:

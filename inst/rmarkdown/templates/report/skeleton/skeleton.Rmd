@@ -5,14 +5,26 @@ author: 'fnaufel'
 email: 'https://fnaufel.github.io/'
 date: '   (v. `r format(Sys.Date(), "%d/%m/%Y")`)'
 lang: 'pt-br'
+
 output: 
+  # To install these output formats, run
+  #   install.packages("devtools")
+  #   devtools::install_github("fnaufel/fnaufelRmd")
   fnaufelRmd::html_report:
     []
   fnaufelRmd::pdf_report:
     []
-# To install these formats, enter
-#   install.packages("devtools")
-#   devtools::install_github("fnaufel/fnaufelRmd")
+
+# LaTeX / pdf options
+#
+# For more options, see
+# https://pandoc.org/MANUAL.html#variables-for-latex
+documentclass: article
+classoption: '11pt'
+geometry: 'margin=1in'
+bibliography: []
+biblio-style: apalike
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}

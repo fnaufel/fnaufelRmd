@@ -73,7 +73,7 @@ pdf_book(
 see \link[bookdown:pdf_book]{bookdown::pdf_book}
 }
 \description{
-Custom PDF template
+Custom PDF template for books
 }
 \details{
 Loads additional style and configs

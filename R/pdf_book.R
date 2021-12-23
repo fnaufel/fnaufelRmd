@@ -1,4 +1,4 @@
-#' Custom PDF template
+#' Custom PDF template for books
 #'
 #' Loads additional style and configs
 #'
