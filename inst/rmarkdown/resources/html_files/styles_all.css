@@ -19,11 +19,6 @@ table.lightable-paper tbody {
   font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* Fix bottom margin in output blocks */
-div.sourceCode + pre {
-  margin-bottom: 40px;
-}
-
 /* Make summarytools table use monospace font */
 .st-table {
   font-family: 'JetBrains Mono', monospace;
