@@ -47,7 +47,7 @@ table.lightable-paper tbody {
 /* Several kinds of boxes */
 
 .rmdbox {
-  margin: 1rem calc(-2px - 0.5em);
+  margin: 2.5rem calc(-2px - 0.5em);
   padding: 1.3em 1em 1em 1em;
   border: 2px solid #ccc;
   background: #fcfcfc;
@@ -67,7 +67,7 @@ table.lightable-paper tbody {
 }
 
 .rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
-  margin: 1rem calc(-2px - 0.5em);
+  margin: 2.5rem calc(-2px - 0.5em);
   border: 2px solid #ccc;
   padding: 1.3em 1em 1em 6em;
   background: #fcfcfc 25px calc(10% + 10px) no-repeat;
