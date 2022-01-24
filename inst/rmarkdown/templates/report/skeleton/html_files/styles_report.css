@@ -1,1 +1,26 @@
-/home/fnaufel/Development/00-Present/RMarkDownTemplates/fnaufelRmd/inst/rmarkdown/resources/html_files/styles_report.css
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lexend&family=JetBrains+Mono&display=swap');
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+
+h1, h2, h3, h4, h5, h6, nav, footer, .chapter-nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Links in main text (not navigation) */
+.section a {
+  text-decoration: underline;
+}
+
+/* Fix bottom margin in output blocks (report) */
+pre.r {
+  margin-bottom: 40px;
+}
+
