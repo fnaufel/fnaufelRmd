@@ -15,8 +15,22 @@ documentclass: "report"
 classoption: '11pt'
 geometry: 'margin=1in'
 bibliography: []
-biblio-style: apalike
 link-citations: yes
+
+# Bibliography style: 
+# choose one and delete the other:
+
+# For ABNT in Portuguese
+csl: |
+  `r if(knitr::is_html_output())
+   'html_files/associacao-brasileira-de-normas-tecnicas-note.csl' else 
+   'pdf_files/associacao-brasileira-de-normas-tecnicas.csl'`
+
+# For Chicago in English
+csl: |
+  `r if(knitr::is_html_output())
+   'html_files/chicago-fullnote-bibliography.csl' else
+   'pdf_files/chicago-author-date.csl'`
 
 ---
 
