@@ -68,7 +68,7 @@ pdf_book <- function(
   df_print = 'tibble',
   keep_tex = TRUE,
   latex_engine = 'xelatex',
-  citation_package = 'natbib',
+  citation_package = 'default',
   includes = rmarkdown::includes(
     in_header = system.file(
       "rmarkdown/resources/tex/bd-preamble.tex",
