@@ -88,7 +88,7 @@ theme_set(
 # CAREFUL: if called outside math mode, will print the braces!
 fm <- function(
   x,
-  digits = getOption('fmdigits', default = 4),
+  digits = getOption('fmdigits', default = 3),
   big = '.',
   decimal = '{,}',
   ...
@@ -107,12 +107,13 @@ fm <- function(
         ...
       )
     } else {
-      # integer
+      # no decimal point
       formatC(
         x,
         big.mark = big,
         decimal.mark = decimal,
-        format = 'd',
+        format = 'f',  # must be f to handle values outside integer range
+        digits = 0,
         ...
       )
     }
