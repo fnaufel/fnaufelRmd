@@ -73,6 +73,8 @@ bs4_book <- function(
   if (copy_supporting_files) {
     # Destination dir for supporting files
     target_dir <- normalizePath('html_files')
+    if (!dir.exists(target_dir))
+      dir.create(target_dir)
 
     supporting <- system.file(
       c(

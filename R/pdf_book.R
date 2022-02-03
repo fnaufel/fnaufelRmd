@@ -4,6 +4,7 @@
 #'
 #' @title pdf_book
 #'
+#' @param copy_supporting_files If TRUE, copy supporting files (.csl etc.) to document dir before rendering
 #' @param toc see [bookdown::pdf_book]
 #' @param number_sections see [bookdown::pdf_book]
 #' @param fig_caption see [bookdown::pdf_book]
@@ -33,6 +34,7 @@
 #' @export
 #'
 pdf_book <- function(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   number_sections = TRUE,
   fig_caption = TRUE,
@@ -82,6 +84,30 @@ pdf_book <- function(
   ),
   ...
 ) {
+
+  if (copy_supporting_files) {
+    # Destination dir for supporting files (PDF)
+    target_dir <- normalizePath('pdf_files')
+    if (!dir.exists(target_dir))
+      dir.create(target_dir)
+
+    supporting <- system.file(
+      c(
+        'rmarkdown/resources/pdf_files/abnt.csl',
+        'rmarkdown/resources/pdf_files/chicago-author-date.csl'
+      ),
+      package = 'fnaufelRmd'
+    )
+
+    file.copy(
+      from = supporting,
+      to = target_dir,
+      overwrite = TRUE,
+      recursive = TRUE,
+      copy.date = TRUE
+    )
+
+  }
 
   # call the base function
   bookdown::pdf_book(

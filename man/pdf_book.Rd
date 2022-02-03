@@ -5,6 +5,7 @@
 \title{pdf_book}
 \usage{
 pdf_book(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   number_sections = TRUE,
   fig_caption = TRUE,
@@ -23,7 +24,7 @@ pdf_book(
   df_print = "tibble",
   keep_tex = TRUE,
   latex_engine = "xelatex",
-  citation_package = "natbib",
+  citation_package = "default",
   includes = rmarkdown::includes(in_header =
     system.file("rmarkdown/resources/tex/bd-preamble.tex", package = "fnaufelRmd")),
   md_extensions = "+fenced_divs+bracketed_spans",
@@ -33,6 +34,8 @@ pdf_book(
 )
 }
 \arguments{
+\item{copy_supporting_files}{If TRUE, copy supporting files (.csl etc.) to document dir before rendering}
+
 \item{toc}{see \link[bookdown:pdf_book]{bookdown::pdf_book}}
 
 \item{number_sections}{see \link[bookdown:pdf_book]{bookdown::pdf_book}}

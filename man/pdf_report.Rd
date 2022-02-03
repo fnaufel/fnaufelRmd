@@ -5,6 +5,7 @@
 \title{pdf_report}
 \usage{
 pdf_report(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   toc_depth = 2,
   number_sections = TRUE,
@@ -36,6 +37,8 @@ pdf_report(
 )
 }
 \arguments{
+\item{copy_supporting_files}{If TRUE, copy supporting files (.csl etc.) to document dir before rendering}
+
 \item{toc}{see \link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}
 
 \item{toc_depth}{see \link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}

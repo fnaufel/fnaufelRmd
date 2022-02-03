@@ -4,6 +4,7 @@
 #'
 #' @title pdf_report
 #'
+#' @param copy_supporting_files If TRUE, copy supporting files (.csl etc.) to document dir before rendering
 #' @param toc see [rmarkdown::pdf_document]
 #' @param toc_depth see [rmarkdown::pdf_document]
 #' @param number_sections see [rmarkdown::pdf_document]
@@ -34,6 +35,7 @@
 #' @importFrom rmarkdown includes pdf_document
 #'
 pdf_report <- function(
+  copy_supporting_files = TRUE,
   toc = TRUE,
   toc_depth = 2,
   number_sections = TRUE,
@@ -86,6 +88,30 @@ pdf_report <- function(
   extra_dependencies = NULL,
   ...
 ) {
+
+  if (copy_supporting_files) {
+    # Destination dir for supporting files (PDF)
+    target_dir <- normalizePath('pdf_files')
+    if (!dir.exists(target_dir))
+      dir.create(target_dir)
+
+    supporting <- system.file(
+      c(
+        'rmarkdown/resources/pdf_files/abnt.csl',
+        'rmarkdown/resources/pdf_files/chicago-author-date.csl'
+      ),
+      package = 'fnaufelRmd'
+    )
+
+    file.copy(
+      from = supporting,
+      to = target_dir,
+      overwrite = TRUE,
+      recursive = TRUE,
+      copy.date = TRUE
+    )
+
+  }
 
   # call the base function
   rmarkdown::pdf_document(

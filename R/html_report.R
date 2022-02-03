@@ -74,8 +74,10 @@ html_report <- function(
 ) {
 
   if (copy_supporting_files) {
-    # Destination dir for supporting files
+    # Destination dir for supporting files (HTML)
     target_dir <- normalizePath('html_files')
+    if (!dir.exists(target_dir))
+      dir.create(target_dir)
 
     supporting <- system.file(
       c(
@@ -83,6 +85,8 @@ html_report <- function(
         'rmarkdown/resources/html_files/styles_report.css',
         'rmarkdown/resources/html_files/alterar_detalhes.js',
         'rmarkdown/resources/html_files/preamble.html',
+        'rmarkdown/resources/html_files/abnt-note.csl',
+        'rmarkdown/resources/html_files/chicago-fullnote-bibliography.csl',
         'rmarkdown/resources/images'
       ),
       package = 'fnaufelRmd'
@@ -95,6 +99,7 @@ html_report <- function(
       recursive = TRUE,
       copy.date = TRUE
     )
+
   }
 
   # css styles
