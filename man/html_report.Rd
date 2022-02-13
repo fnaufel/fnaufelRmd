@@ -32,6 +32,7 @@ html_report(
   lib_dir = "libs",
   md_extensions = NULL,
   pandoc_args = NULL,
+  highlight_downlit = TRUE,
   ...
 )
 }

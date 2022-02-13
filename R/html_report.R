@@ -70,6 +70,7 @@ html_report <- function(
   lib_dir = "libs",
   md_extensions = NULL,
   pandoc_args = NULL,
+  highlight_downlit = TRUE,
   ...
 ) {
 
@@ -139,6 +140,7 @@ html_report <- function(
     lib_dir = lib_dir,
     md_extensions = md_extensions,
     pandoc_args = pandoc_args,
+    highlight_downlit,
     ...
   )
 
