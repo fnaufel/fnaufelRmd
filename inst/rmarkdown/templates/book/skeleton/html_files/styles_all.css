@@ -70,8 +70,9 @@ table.lightable-paper tbody {
   margin: 1.5rem calc(-2px - 0.5em);
   border: 2px solid #ccc;
   padding: 1.3em 1em 1em 6em;
-  background: #fcfcfc 25px calc(10% + 10px) no-repeat;
+  background: #fcfcfc 25px 15px no-repeat;
   border-radius: 10px;
+  min-height: 80px;
 }
 
 .rmdcaution {
@@ -221,6 +222,10 @@ h3 > .header-section-number {
 
 .two-thirds-width{
   width: 67%;
+}
+
+.ninety-pct-width{
+  width: 90%;
 }
 
 .float-right{

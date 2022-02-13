@@ -21,6 +21,6 @@ h1, h2, h3, h4, h5, h6, nav, footer, .chapter-nav {
 
 /* Fix bottom margin in output blocks (report) */
 pre.r {
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
