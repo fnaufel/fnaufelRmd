@@ -54,7 +54,7 @@ html_report <- function(
   fig_caption = TRUE,
   dev = "png",
   df_print = "paged",
-  code_folding = "show",
+  code_folding = "none",
   code_download = TRUE,
   self_contained = TRUE,
   theme = "default",
