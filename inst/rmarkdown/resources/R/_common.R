@@ -135,10 +135,12 @@ conflict_prefer("filter", "dplyr")
 # Usage:
 #         out.extra=center()
 #
-center <- function(){
+center <- function(width = '80%'){
 
   if (is_html_output()) {
-    'class="center"'
+    paste0(
+      'class="center" style="width: ', width, ';"'
+    )
   }
 
 }
