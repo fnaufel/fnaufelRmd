@@ -11,7 +11,7 @@ bs4_book(
     = bslib::font_google("JetBrains Mono"), ),
   template = system.file("rmarkdown/resources/html_files/bs4_book_ptbr.html", package =
     "fnaufelRmd"),
-  includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
+  includes = NULL,
   css = "default",
   repo = NULL,
   site = bookdown::bookdown_site,

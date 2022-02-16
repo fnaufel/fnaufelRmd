@@ -47,9 +47,7 @@ bs4_book <- function(
     "rmarkdown/resources/html_files/bs4_book_ptbr.html",
     package = "fnaufelRmd"
   ),
-  includes = rmarkdown::includes(
-    in_header = 'html_files/preamble.html'
-  ),
+  includes = NULL,
   css = 'default',
   repo = NULL,
   site = bookdown::bookdown_site,
@@ -105,6 +103,26 @@ bs4_book <- function(
     )
   }
 
+  # includes
+  full_incl <- rmarkdown::includes(
+    in_header = 'html_files/preamble.html'
+  )
+
+  if (!is.null(includes)) {
+    full_incl$in_header <- append(
+      full_incl$in_header,
+      includes$in_header
+    )
+    full_incl$before_body <- append(
+      full_incl$before_body,
+      includes$before_body
+    )
+    full_incl$after_body <- append(
+      full_incl$after_body,
+      includes$after_body
+    )
+  }
+
   # call the base function
   bookdown::bs4_book(
     theme = theme,
@@ -124,7 +142,7 @@ bs4_book <- function(
     df_print = df_print,
     mathjax = mathjax,
     css = css,
-    includes = includes,
+    includes = full_incl,
     keep_md = keep_md,
     md_extensions = md_extensions,
     ...
