@@ -26,7 +26,7 @@
 #'
 #' @return see [bookdown::pdf_book]
 #'
-#' @importFrom rmarkdown pdf_document
+#' @importFrom rmarkdown pdf_document includes
 #' @importFrom bookdown pdf_book
 #'
 #' @author fnaufel
@@ -71,12 +71,7 @@ pdf_book <- function(
   keep_tex = TRUE,
   latex_engine = 'xelatex',
   citation_package = 'default',
-  includes = rmarkdown::includes(
-    in_header = system.file(
-      "rmarkdown/resources/tex/bd-preamble.tex",
-      package = "fnaufelRmd"
-    )
-  ),
+  includes = NULL,
   md_extensions = '+fenced_divs+bracketed_spans',
   template = system.file(
     'rmarkdown/resources/tex/bd-format.latex',
@@ -109,6 +104,18 @@ pdf_book <- function(
 
   }
 
+  # includes
+  full_incl <- rmarkdown::includes(
+    in_header = system.file(
+      "rmarkdown/resources/tex/bd-preamble.tex",
+      package = "fnaufelRmd"
+    )
+  )
+
+  if (!is.null(includes)) {
+    full_incl <- merge_named_lists(full_incl, includes)
+  }
+
   # call the base function
   bookdown::pdf_book(
     toc = toc,
@@ -125,7 +132,7 @@ pdf_book <- function(
     keep_tex = keep_tex,
     latex_engine = latex_engine,
     citation_package = citation_package,
-    includes = includes,
+    includes = full_incl,
     md_extensions = md_extensions,
     template = template,
     ...

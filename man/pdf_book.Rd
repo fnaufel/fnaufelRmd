@@ -25,8 +25,7 @@ pdf_book(
   keep_tex = TRUE,
   latex_engine = "xelatex",
   citation_package = "default",
-  includes = rmarkdown::includes(in_header =
-    system.file("rmarkdown/resources/tex/bd-preamble.tex", package = "fnaufelRmd")),
+  includes = NULL,
   md_extensions = "+fenced_divs+bracketed_spans",
   template = system.file("rmarkdown/resources/tex/bd-format.latex", package =
     "fnaufelRmd"),

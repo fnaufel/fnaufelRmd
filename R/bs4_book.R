@@ -109,18 +109,7 @@ bs4_book <- function(
   )
 
   if (!is.null(includes)) {
-    full_incl$in_header <- append(
-      full_incl$in_header,
-      includes$in_header
-    )
-    full_incl$before_body <- append(
-      full_incl$before_body,
-      includes$before_body
-    )
-    full_incl$after_body <- append(
-      full_incl$after_body,
-      includes$after_body
-    )
+    full_incl <- merge_named_lists(full_incl, includes)
   }
 
   # call the base function
