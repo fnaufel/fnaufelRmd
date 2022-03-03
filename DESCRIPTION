@@ -1,6 +1,6 @@
 Package: fnaufelRmd
 Title: fnaufel's RMarkdown templates and formats
-Version: 0.0.10
+Version: 0.0.11
 Authors@R: person("Fernando", "Naufel", , "fnaufel@gmail.com", role =
        c("aut", "cre"))
 Description: fnaufel's RMarkdown templates and formats.
