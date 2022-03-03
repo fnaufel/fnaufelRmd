@@ -5,40 +5,41 @@
 #' @title html_report
 #'
 #' @param copy_supporting_files If TRUE, copy supporting files (css, js, html) to document dir before rendering
-#' @param toc see [rmarkdown::html_document]
-#' @param toc_depth see [rmarkdown::html_document]
-#' @param toc_float see [rmarkdown::html_document]
-#' @param number_sections see [rmarkdown::html_document]
-#' @param anchor_sections see [rmarkdown::html_document]
-#' @param section_divs see [rmarkdown::html_document]
-#' @param fig_width see [rmarkdown::html_document]
-#' @param fig_height see [rmarkdown::html_document]
-#' @param fig_retina see [rmarkdown::html_document]
-#' @param fig_caption see [rmarkdown::html_document]
-#' @param dev see [rmarkdown::html_document]
-#' @param df_print see [rmarkdown::html_document]
-#' @param code_folding see [rmarkdown::html_document]
-#' @param code_download see [rmarkdown::html_document]
-#' @param self_contained see [rmarkdown::html_document]
-#' @param theme see [rmarkdown::html_document]
-#' @param highlight see [rmarkdown::html_document]
-#' @param mathjax see [rmarkdown::html_document]
-#' @param template see [rmarkdown::html_document]
-#' @param extra_dependencies see [rmarkdown::html_document]
-#' @param css see [rmarkdown::html_document]
-#' @param includes see [rmarkdown::html_document]
-#' @param keep_md see [rmarkdown::html_document]
-#' @param lib_dir see [rmarkdown::html_document]
-#' @param md_extensions see [rmarkdown::html_document]
-#' @param pandoc_args see [rmarkdown::html_document]
-#' @param ... see [rmarkdown::html_document]
+#' @param toc see [bookdown::html_document2]
+#' @param toc_depth see [bookdown::html_document2]
+#' @param toc_float see [bookdown::html_document2]
+#' @param number_sections see [bookdown::html_document2]
+#' @param anchor_sections see [bookdown::html_document2]
+#' @param section_divs see [bookdown::html_document2]
+#' @param fig_width see [bookdown::html_document2]
+#' @param fig_height see [bookdown::html_document2]
+#' @param fig_retina see [bookdown::html_document2]
+#' @param fig_caption see [bookdown::html_document2]
+#' @param dev see [bookdown::html_document2]
+#' @param df_print see [bookdown::html_document2]
+#' @param code_folding see [bookdown::html_document2]
+#' @param code_download see [bookdown::html_document2]
+#' @param self_contained see [bookdown::html_document2]
+#' @param theme see [bookdown::html_document2]
+#' @param highlight see [bookdown::html_document2]
+#' @param mathjax see [bookdown::html_document2]
+#' @param template see [bookdown::html_document2]
+#' @param extra_dependencies see [bookdown::html_document2]
+#' @param css see [bookdown::html_document2]
+#' @param includes see [bookdown::html_document2]
+#' @param keep_md see [bookdown::html_document2]
+#' @param lib_dir see [bookdown::html_document2]
+#' @param md_extensions see [bookdown::html_document2]
+#' @param pandoc_args see [bookdown::html_document2]
+#' @param ... see [bookdown::html_document2]
 #'
-#' @return see [rmarkdown::html_document]
+#' @return see [bookdown::html_document2]
 #'
 #' @author fnaufel
 #' @export
 #' @importFrom bslib bs_theme font_google
-#' @importFrom rmarkdown includes html_document
+#' @importFrom rmarkdown includes
+#' @importFrom bookdown html_document2
 #'
 html_report <- function(
   copy_supporting_files = TRUE,
@@ -113,7 +114,7 @@ html_report <- function(
   }
 
   # call the base function
-  rmarkdown::html_document(
+  bookdown::html_document2(
     toc = toc,
     toc_depth = toc_depth,
     toc_float = toc_float,

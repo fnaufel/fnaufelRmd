@@ -2,15 +2,12 @@ Package: fnaufelRmd
 Title: fnaufel's RMarkdown templates and formats
 Version: 0.0.10
 Authors@R: person("Fernando", "Naufel", , "fnaufel@gmail.com", role =
-        c("aut", "cre"))
+       c("aut", "cre"))
 Description: fnaufel's RMarkdown templates and formats.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports: 
-    bookdown (>= 0.24.7),
-    bslib (>= 0.3.1),
-    rmarkdown (>= 2.11.14)
+Imports: bookdown,bslib,rmarkdown
 URL: https://github.com/fnaufel/fnaufelRmd
 BugReports: https://github.com/fnaufel/fnaufelRmd/issues

@@ -39,62 +39,62 @@ html_report(
 \arguments{
 \item{copy_supporting_files}{If TRUE, copy supporting files (css, js, html) to document dir before rendering}
 
-\item{toc}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{toc}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{toc_depth}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{toc_depth}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{toc_float}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{toc_float}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{number_sections}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{number_sections}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{anchor_sections}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{anchor_sections}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{section_divs}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{section_divs}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{fig_width}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{fig_width}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{fig_height}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{fig_height}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{fig_retina}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{fig_retina}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{fig_caption}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{fig_caption}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{dev}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{dev}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{df_print}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{df_print}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{code_folding}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{code_folding}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{code_download}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{code_download}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{self_contained}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{self_contained}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{theme}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{theme}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{highlight}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{highlight}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{mathjax}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{mathjax}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{template}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{template}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{extra_dependencies}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{extra_dependencies}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{css}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{css}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{includes}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{includes}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{keep_md}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{keep_md}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{lib_dir}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{lib_dir}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{md_extensions}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{md_extensions}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{pandoc_args}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{pandoc_args}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 
-\item{...}{see \link[rmarkdown:html_document]{rmarkdown::html_document}}
+\item{...}{see \link[bookdown:html_document2]{bookdown::html_document2}}
 }
 \value{
-see \link[rmarkdown:html_document]{rmarkdown::html_document}
+see \link[bookdown:html_document2]{bookdown::html_document2}
 }
 \description{
 Custom HTML template for reports
