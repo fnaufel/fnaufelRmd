@@ -60,7 +60,6 @@ table.lightable-paper tbody {
 
 .rmdnote, .rmdcaution, .rmdimportant, .rmdtip, .rmdwarning {
   padding: 1rem 1rem 1rem 5rem;
-  min-height: 80px;
   border-radius: 10px;
   background-color: #fcfcfc;
   background-position: 1rem 50%;
