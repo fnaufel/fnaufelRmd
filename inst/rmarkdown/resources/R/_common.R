@@ -1,7 +1,7 @@
 library(knitr)
 
 opts_chunk$set(
-  collapse = TRUE,
+  collapse = FALSE,
   cache = FALSE,
   out.width = "100%",
   fig.align = 'center',
