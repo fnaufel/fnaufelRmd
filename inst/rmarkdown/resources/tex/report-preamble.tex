@@ -40,6 +40,17 @@
 {\thesubsection}{.5em}{\titlerule\\[.8ex]\bfseries}%
 [\vspace{1ex}]
 
+\titleformat{\subsubsection}[block]%
+{\itshape}%
+{\thesubsubsection}{.5em}{\titlerule\\[.8ex]\itshape}%
+[\vspace{1ex}]
+
+\titleformat{\paragraph}[block]%
+{\itshape}%
+{\theparagraph}{.5em}{\\[.8ex]\itshape}%
+[\vspace{1ex}]
+
+
 %%%%%%%%%%%%%%%
 %
 % Caixas
@@ -183,6 +194,7 @@
 \makeatother
 
 % Use tt in tables
+\usepackage{longtable}
 \let\oldlongtable\longtable
 \let\endoldlongtable\endlongtable
 \renewenvironment{longtable}{\tt\oldlongtable}{\endoldlongtable}
