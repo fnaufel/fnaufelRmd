@@ -45,12 +45,16 @@
 % Caixas
 
 \usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\tcbuselibrary{skins}
 
 \tcbset{
+  enhanced,
   rounded corners,
   boxrule=0.3mm,
   colback=black!.5!white,
-  parbox=false
+  parbox=false,
+  /tcb/breakable=true
 }
 
 \newtcolorbox{rmdbox}{
