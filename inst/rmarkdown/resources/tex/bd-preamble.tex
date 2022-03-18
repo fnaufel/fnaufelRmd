@@ -182,6 +182,12 @@
 }
 \makeatother
 
+% Use tt in tables
+\let\oldlongtable\longtable
+\let\endoldlongtable\endlongtable
+\renewenvironment{longtable}{\tt\oldlongtable}{\endoldlongtable}
+
+
 % End of preamble for bookdowntemplate01
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
