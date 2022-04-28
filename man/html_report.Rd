@@ -27,7 +27,7 @@ html_report(
   template = "default",
   extra_dependencies = NULL,
   css = "default",
-  includes = rmarkdown::includes(in_header = "html_files/preamble.html"),
+  includes = NULL,
   keep_md = FALSE,
   lib_dir = "libs",
   md_extensions = NULL,

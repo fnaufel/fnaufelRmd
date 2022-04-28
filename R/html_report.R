@@ -64,9 +64,7 @@ html_report <- function(
   template = "default",
   extra_dependencies = NULL,
   css = 'default',
-  includes = rmarkdown::includes(
-    in_header = 'html_files/preamble.html'
-  ),
+  includes = NULL,
   keep_md = FALSE,
   lib_dir = "libs",
   md_extensions = NULL,
@@ -113,6 +111,15 @@ html_report <- function(
     )
   }
 
+  # includes
+  full_incl <- rmarkdown::includes(
+    in_header = 'html_files/preamble.html'
+  )
+
+  if (!is.null(includes)) {
+    full_incl <- merge_named_lists(full_incl, includes)
+  }
+
   # call the base function
   bookdown::html_document2(
     toc = toc,
@@ -136,7 +143,7 @@ html_report <- function(
     template = template,
     extra_dependencies = extra_dependencies,
     css = css,
-    includes = includes,
+    includes = full_incl,
     keep_md = keep_md,
     lib_dir = lib_dir,
     md_extensions = md_extensions,
