@@ -173,13 +173,9 @@ embed_yt <- function(code) {
 
 # Add package names to downlit options so that functions from these packages
 # are correctly linked to the docs in the HTML output
-packages <- c(
-  getNamespace("tidyverse")$core,
-  'knitr',
-  'latex2exp',
-  'kableExtra',
-  'summarytools',
-  'conflicted'
-)
+library(sessioninfo)
+
+packages <- session_info('attached')$packages %>%
+  pull(package)
 
 options(downlit.attached = packages)
