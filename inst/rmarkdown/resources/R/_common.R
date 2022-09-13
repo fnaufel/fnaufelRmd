@@ -14,20 +14,6 @@ options(dplyr.print_min = 6, dplyr.print_max = 6)
 # Supress crayon output
 options(crayon.enabled = FALSE)
 
-options(
-  # Avoid scientific notation
-  scipen = 15,
-  # Use a comma as decimal separator
-  OutDec = ',',
-  # Number of decimal digits for numbers produced by inline R code
-  fmdigits = 2,
-  # Width of text output
-  width = ifelse(is_html_output(), 85, 71),
-  # Number of head elements to show in
-  str = strOptions(vec.len = 3)
-)
-
-
 # Useful libraries
 library(latex2exp)
 library(kableExtra)
@@ -179,3 +165,18 @@ packages <- session_info('attached')$packages %>%
   pull(package)
 
 options(downlit.attached = packages)
+
+options(
+  # Avoid scientific notation
+  scipen = 15,
+  # Use a comma as decimal separator
+  OutDec = ',',
+  # Number of decimal digits for numbers produced by inline R code
+  fmdigits = 2,
+  # Width of text output
+  width = ifelse(is_html_output(), 85, 71),
+  # Number of head elements to show in
+  str = strOptions(vec.len = 3)
+)
+
+
