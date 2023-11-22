@@ -67,6 +67,7 @@ theme_set(
     )
 )
 
+theme_fnaufel <- theme_get()
 
 
 # Format a number with thousand separators (default point)
